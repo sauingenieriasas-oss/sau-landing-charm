@@ -5,13 +5,13 @@ import { useState } from "react";
 import { Logo } from "./Logo";
 import { whatsappLink } from "@/lib/site";
 
-const NAV = [
-  { label: "Inicio", to: "/", hash: undefined as string | undefined },
+const NAV: { label: string; to: "/" | "/servicios" | "/contacto"; hash?: string }[] = [
+  { label: "Inicio", to: "/" },
   { label: "Nosotros", to: "/", hash: "nosotros" },
-  { label: "Servicios", to: "/servicios", hash: undefined },
+  { label: "Servicios", to: "/servicios" },
   { label: "Productos", to: "/", hash: "productos" },
   { label: "Casos de éxito", to: "/", hash: "casos" },
-  { label: "Contacto", to: "/contacto", hash: undefined },
+  { label: "Contacto", to: "/contacto" },
 ];
 
 export function SiteHeader() {
@@ -27,9 +27,8 @@ export function SiteHeader() {
             <Link
               key={item.label}
               to={item.to}
-              hash={item.hash}
+              {...(item.hash ? { hash: item.hash } : {})}
               className="text-sm font-medium text-navy transition-colors hover:text-primary"
-              activeOptions={{ exact: true, includeHash: false }}
               activeProps={{ className: "text-primary" }}
             >
               {item.label}
@@ -70,7 +69,7 @@ export function SiteHeader() {
             <Link
               key={item.label}
               to={item.to}
-              hash={item.hash}
+              {...(item.hash ? { hash: item.hash } : {})}
               onClick={() => setOpen(false)}
               className="block border-b border-border py-3 text-sm font-medium text-navy"
             >
