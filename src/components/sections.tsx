@@ -239,7 +239,7 @@ export function LixiviadosHighlight() {
           </p>
           <h2 className="mt-1 text-2xl font-bold text-navy">Tratamiento de lixiviados</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Soluciones efectivas para el tratamiento de lixiviados en rellenos sanitarios y
+            Soluciones para el tratamiento de lixiviados en rellenos sanitarios y
             estaciones de transferencia, con esquemas físico-químicos y biológicos diseñados para
             cargas altamente contaminantes.
           </p>
@@ -306,7 +306,7 @@ export function AboutSection() {
             Ingeniería con propósito, resultados que se ven.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-            {COMPANY.legalName} es una empresa barranquillera, con presencia en gran parte del
+            {COMPANY.legalName} es una empresa barranquillera, que lleva soluciones a gran parte del
             territorio colombiano, especializada en soluciones de ingeniería ambiental, tratamiento
             de agua y optimización de procesos industriales. Convertimos tus desafíos en
             oportunidades de mejora continua, con soluciones técnicas, químicas y biotecnológicas y

@@ -26,7 +26,8 @@ export const MISSION =
   "Acompañar a empresas e instituciones en la optimización de sus procesos ambientales y de tratamiento de agua, mediante soluciones técnicas, químicas y biotecnológicas que mejoren la eficiencia, la calidad, el cumplimiento normativo y la sostenibilidad de sus operaciones.";
 
 export const VISION =
-  "Ser una empresa de referencia en Colombia en soluciones de ingeniería ambiental y tratamiento de agua, reconocida por su innovación, confiabilidad, eficiencia y capacidad para generar resultados sostenibles para sus clientes.";
+  "Ser una empresa de referencia en Colombia en soluciones de ingeniería y tratamiento de agua, reconocida por su innovación, confiabilidad, eficiencia y capacidad para generar resultados sostenibles para sus clientes.";
+
 
 export const SERVICES = [
   {
