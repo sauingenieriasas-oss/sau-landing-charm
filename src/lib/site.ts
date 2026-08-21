@@ -32,7 +32,8 @@ export const SERVICES = [
     id: "agua-potable",
     icon: "droplet",
     title: "Tratamiento de agua potable",
-    short: "Optimización y operación de plantas potabilizadoras para garantizar calidad y continuidad.",
+    short:
+      "Optimización y operación de plantas potabilizadoras para garantizar calidad y continuidad.",
     long: "Diseñamos, optimizamos y acompañamos la operación de plantas potabilizadoras: esquemas de coagulación, floculación, filtración y desinfección, con programas de control de calidad que aseguran agua segura y continuidad del servicio.",
   },
   {
@@ -46,7 +47,8 @@ export const SERVICES = [
     id: "optimizacion-ptap-ptar",
     icon: "trending",
     title: "Optimización de PTAP y PTAR",
-    short: "Ajustamos y mejoramos tus plantas actuales para aumentar su eficiencia sin necesidad de cambiarlas.",
+    short:
+      "Ajustamos y mejoramos tus plantas actuales para aumentar su eficiencia sin necesidad de cambiarlas.",
     long: "Diagnosticamos la planta existente, identificamos cuellos de botella hidráulicos, químicos y biológicos, y ejecutamos mejoras de bajo costo que multiplican su capacidad y estabilidad sin grandes inversiones ni paradas de operación.",
   },
   {

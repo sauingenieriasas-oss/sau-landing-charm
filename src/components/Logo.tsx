@@ -17,7 +17,7 @@ export function Logo({ className = "h-12" }: { className?: string }) {
   );
 }
 
-export function LogoInverted({ className = "h-14" }: { className?: string }) {
+export function LogoInverted({ className = "h-16" }: { className?: string }) {
   return (
     <img
       src={logo.url}

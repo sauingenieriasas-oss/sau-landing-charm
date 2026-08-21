@@ -39,8 +39,8 @@ function ServiciosPage() {
             Soluciones a la medida de cada necesidad
           </h1>
           <p className="mt-4 max-w-xl text-sm text-navy-foreground/75">
-            Nueve líneas de servicio para diagnosticar, diseñar, operar y optimizar procesos de agua
-            y procesos industriales.
+            Nueve líneas de servicio para diagnosticar, diseñar, operar y optimizar procesos de
+            agua y procesos industriales.
           </p>
         </div>
       </section>
@@ -65,6 +65,7 @@ function ServiciosPage() {
             );
           })}
         </div>
+
       </section>
 
       <LixiviadosHighlight />

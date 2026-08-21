@@ -3,15 +3,15 @@ import {
   ArrowRight,
   Atom,
   Beaker,
-  Check,
+  CheckCircle2,
   ClipboardList,
   Cpu,
   Droplet,
+  Eye,
   FileText,
   FlaskConical,
   Gauge,
   HandHeart,
-  Leaf,
   Lightbulb,
   MapPin,
   Recycle,
@@ -19,17 +19,19 @@ import {
   ShieldCheck,
   Sprout,
   Target,
+  Trash2,
   TrendingUp,
   Users,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-planta.jpg";
-import sobreImg from "@/assets/sobre-planta.jpg";
+import heroImg from "@/assets/hero-planta-sau.jpg.asset.json";
+import sobreImg from "@/assets/sobre-planta-sau.jpg.asset.json";
 import tamborImg from "@/assets/producto-tambor.png";
 import ibcImg from "@/assets/producto-ibc.png";
 import garrafaImg from "@/assets/producto-garrafa.png";
 import {
   COMMITMENTS,
+  COMPANY,
   MISSION,
   PRODUCTS,
   SECTORS,
@@ -62,17 +64,25 @@ function SectionLabel({ children }: { children: string }) {
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-8 pt-10 lg:grid-cols-2 lg:gap-4 lg:px-8 lg:pb-16 lg:pt-14">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-8 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:pb-16 lg:pt-14">
         <div>
           <h1 className="text-4xl font-extrabold leading-[1.08] text-navy sm:text-5xl">
-            Ingeniería que <span className="text-primary">optimiza, transforma</span> y{" "}
-            <span className="text-primary-mid">protege</span>.
+            Ingeniería que <span className="text-primary">optimiza</span>,{" "}
+            <span className="text-primary-mid">transforma</span> y{" "}
+            <span className="text-navy">protege</span>.
           </h1>
-          <div className="mt-6 h-1 w-20 bg-brown" />
+          <div className="mt-6 flex gap-1">
+            <span className="h-1 w-14 bg-primary" />
+            <span className="h-1 w-10 bg-primary-mid" />
+            <span className="h-1 w-6 bg-lime" />
+          </div>
           <p className="mt-6 max-w-md text-base text-muted-foreground">
             Mejoramos el rendimiento de tus plantas actuales{" "}
             <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>,
             multiplicando su eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
+          </p>
+          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.12em] text-brown">
+            {COMPANY.slogan}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -82,25 +92,24 @@ export function HeroSection() {
               Solicitar asesoría <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              to="/"
-              hash="nosotros"
+              to="/servicios"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-accent"
             >
-              Conocer más <ArrowRight className="h-4 w-4" />
+              Ver servicios <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
 
         <div className="relative">
           <img
-            src={heroImg}
-            alt="Planta de tratamiento de agua operada por SAU Ingeniería"
-            width={1600}
-            height={1100}
-            className="h-[280px] w-full rounded-lg object-cover sm:h-[380px] lg:h-[440px]"
+            src={heroImg.url}
+            alt="Planta de tratamiento de agua optimizada por SAU Ingeniería"
+            width={780}
+            height={900}
+            className="h-[280px] w-full rounded-lg object-cover sm:h-[380px] lg:h-[460px]"
           />
           <div
-            className="absolute -bottom-3 right-0 h-16 w-2/3 bg-primary-mid"
+            className="absolute -bottom-3 right-0 h-16 w-2/3 bg-primary"
             style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
           />
           <div
@@ -122,7 +131,7 @@ export function HeroSection() {
             Icon: FlaskConical,
             color: "bg-navy",
             title: "Experiencia técnica",
-            text: "Conocimiento aplicado a cada proceso",
+            text: "Ingeniería química y ambiental aplicada",
           },
           {
             Icon: ShieldCheck,
@@ -153,22 +162,20 @@ export function ValueProp() {
     <section className="bg-navy py-14 text-navy-foreground">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2 lg:px-8">
         <div>
-          <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl">
-            Optimizamos lo que <span className="text-lime">ya tienes</span>, multiplicamos{" "}
-            <span className="text-lime">sus resultados</span>.
+          <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
+            Optimizamos <span className="text-lime">lo que ya tienes</span>, multiplicamos sus
+            resultados.
           </h2>
           <p className="mt-4 max-w-lg text-sm text-navy-foreground/75">
-            No necesitas cambiar tu planta para mejorar. Analizamos tu operación y entregamos mejoras
-            técnicas medibles sobre la infraestructura que ya tienes.
+            Sin cambiar tu planta: más eficiencia, menos costo. Mejoramos lo que ya importa en tu
+            operación.
           </p>
         </div>
         <ul className="space-y-4">
           {VALUE_POINTS.map((point) => (
-            <li key={point} className="flex items-start gap-3">
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-mid text-primary-foreground">
-                <Check className="h-4 w-4" />
-              </span>
-              <span className="text-base font-medium">{point}</span>
+            <li key={point} className="flex items-start gap-3 text-sm font-medium">
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-lime" />
+              {point}
             </li>
           ))}
         </ul>
@@ -200,7 +207,7 @@ export function ServicesGrid() {
                 <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-primary">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                   {service.short}
                 </p>
               </article>
@@ -223,22 +230,20 @@ export function ServicesGrid() {
 
 export function LixiviadosHighlight() {
   return (
-    <section className="bg-muted py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 rounded-lg border border-primary/25 bg-card p-8 px-4 sm:flex-row sm:items-center lg:px-8">
-        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-          <ShieldCheck className="h-8 w-8" strokeWidth={1.5} />
+    <section id="lixiviados" className="bg-muted py-14">
+      <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 rounded-lg border border-primary/25 bg-card p-8 sm:flex-row sm:items-center">
+        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-lime text-lime-foreground">
+          <Trash2 className="h-8 w-8" strokeWidth={1.5} />
         </span>
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary-mid">
             Somos expertos en
           </p>
-          <h2 className="mt-1 text-2xl font-extrabold uppercase text-primary sm:text-3xl">
-            Tratamiento de lixiviados
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          <h2 className="mt-1 text-2xl font-bold text-navy">Tratamiento de lixiviados</h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Soluciones efectivas para el tratamiento de lixiviados en rellenos sanitarios y
-            estaciones de transferencia, con control de carga orgánica, color y cumplimiento de
-            vertimientos.
+            estaciones de transferencia, con esquemas físico-químicos y biológicos diseñados para
+            cargas altamente contaminantes.
           </p>
         </div>
       </div>
@@ -249,15 +254,19 @@ export function LixiviadosHighlight() {
 export function MissionVision() {
   return (
     <section id="mision" className="bg-background py-16">
-      <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-2 lg:px-8">
-        <article className="rounded-lg border-l-4 border-primary bg-muted p-7">
-          <h2 className="text-xl font-bold text-primary">Misión</h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{MISSION}</p>
-        </article>
-        <article className="rounded-lg border-l-4 border-navy bg-muted p-7">
-          <h2 className="text-xl font-bold text-navy">Visión</h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{VISION}</p>
-        </article>
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-2 lg:px-8">
+        {[
+          { Icon: Target, title: "Misión", text: MISSION },
+          { Icon: Eye, title: "Visión", text: VISION },
+        ].map(({ Icon, title, text }) => (
+          <article key={title} className="rounded-lg border border-border bg-card p-7">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-navy text-navy-foreground">
+              <Icon className="h-6 w-6" strokeWidth={1.5} />
+            </span>
+            <h2 className="mt-4 text-xl font-bold text-navy">{title}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -269,25 +278,19 @@ export function SectorsSection() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <SectionLabel>Sectores que atendemos</SectionLabel>
         <h2 className="mt-3 text-center text-3xl font-bold text-navy sm:text-4xl">
-          Industrias con exigencias reales de agua y ambiente
+          Experiencia transversal a la industria y los servicios públicos
         </h2>
-
-        <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SECTORS.map((sector) => (
             <li
               key={sector}
-              className="flex items-start gap-3 rounded-md border border-border bg-card px-4 py-3 text-sm font-medium text-navy"
+              className="flex items-start gap-3 rounded-lg border border-border bg-card p-4 text-sm font-medium text-navy"
             >
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary-mid" />
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               {sector}
             </li>
           ))}
         </ul>
-
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          Atendemos pequeñas, medianas y grandes empresas, incluyendo organizaciones con operaciones
-          industriales de alta exigencia.
-        </p>
       </div>
     </section>
   );
@@ -305,10 +308,10 @@ export function AboutSection() {
             Ingeniería con propósito, resultados que se ven.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-            SAU Ingeniería (Soluciones Ambientales Unificadas SAS) es una empresa de ingeniería
-            enfocada en transformar problemas operativos y ambientales en soluciones técnicas,
-            eficientes y sostenibles. Combinamos conocimiento técnico, suministro de insumos
-            especializados y acompañamiento cercano para generar resultados medibles.
+            {COMPANY.legalName} es una empresa colombiana especializada en soluciones de ingeniería
+            ambiental, tratamiento de agua y optimización de procesos industriales. Convertimos tus
+            desafíos en oportunidades de mejora continua, con soluciones técnicas, químicas y
+            biotecnológicas y acompañamiento en cada etapa del proyecto.
           </p>
           <Link
             to="/servicios"
@@ -319,11 +322,11 @@ export function AboutSection() {
         </div>
 
         <img
-          src={sobreImg}
-          alt="Planta industrial de tratamiento de agua al atardecer"
+          src={sobreImg.url}
+          alt="Sistemas de bombeo y descarga de agua tratada"
           loading="lazy"
-          width={1200}
-          height={900}
+          width={360}
+          height={290}
           className="h-full max-h-[340px] w-full rounded-lg object-cover"
         />
 
@@ -341,8 +344,8 @@ export function AboutSection() {
             },
             {
               Icon: Gauge,
-              title: "Eficiencia",
-              text: "Optimizamos procesos para lograr resultados medibles.",
+              title: "Economía",
+              text: "Optimizamos procesos para lograr resultados medibles a menor costo.",
             },
             {
               Icon: HandHeart,
@@ -400,7 +403,7 @@ export function ProductsSection() {
           </div>
 
           <div className="rounded-lg bg-muted p-6">
-            <Target className="h-9 w-9 text-primary" strokeWidth={1.5} />
+            <Beaker className="h-9 w-9 text-primary" strokeWidth={1.5} />
             <h3 className="mt-4 text-lg font-bold leading-snug text-navy">
               ¿No sabes qué producto necesitas?
             </h3>
@@ -424,41 +427,34 @@ export function ProductsSection() {
 
 export function BrandEssence() {
   return (
-    <section className="bg-background py-16">
-      <div className="mx-auto max-w-4xl px-4 text-center lg:px-8">
-        <SectionLabel>Esencia de marca</SectionLabel>
-        <h2 className="mt-3 text-2xl font-extrabold text-navy sm:text-3xl">
-          Innovación <span className="text-primary-mid">+</span> Sostenibilidad{" "}
-          <span className="text-primary-mid">+</span> Eficiencia{" "}
-          <span className="text-primary-mid">+</span> Confianza
-        </h2>
-        <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-          SAU no solo suministra soluciones: entiende el problema, analiza el proceso y acompaña al
-          cliente hacia un resultado medible.
+    <section className="bg-background py-14">
+      <div className="mx-auto max-w-3xl px-4 text-center lg:px-8">
+        <p className="text-2xl font-bold leading-snug text-navy sm:text-3xl">
+          Convertimos tus <span className="text-primary">desafíos</span> en oportunidades de{" "}
+          <span className="text-primary-mid">mejora continua</span>.
         </p>
-        <p className="mt-6 font-display text-lg font-bold text-brown">
-          Convertimos tus desafíos en oportunidades de mejora continua.
-        </p>
+        <p className="mt-4 text-sm uppercase tracking-[0.2em] text-brown">{COMPANY.slogan}</p>
       </div>
     </section>
   );
 }
 
 export function CommitmentsBand() {
-  const icons = [Leaf, Target, Users];
+  const icons = [Sprout, Target, Users] as const;
   return (
     <section className="bg-navy-dark py-10 text-navy-foreground">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-3 lg:px-8">
-        {COMMITMENTS.map((item, i) => {
-          const Icon = icons[i]!;
+        {COMMITMENTS.map(({ title, highlight }, i) => {
+          const Icon = icons[i % icons.length]!;
           return (
-            <div key={item.title} className="flex items-center gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-mid text-primary-foreground">
-                <Icon className="h-6 w-6" strokeWidth={1.75} />
+            <div key={title} className="flex items-center gap-4">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-lime text-lime-foreground">
+                <Icon className="h-6 w-6" strokeWidth={1.5} />
               </span>
-              <p className="text-sm font-semibold uppercase leading-tight">
-                <span className="block text-lime">{item.title}</span>
-                <span className="block">{item.highlight}</span>
+              <p className="text-sm font-semibold uppercase tracking-wide">
+                <span className="text-lime">{title}</span>
+                <br />
+                {highlight}
               </p>
             </div>
           );
@@ -504,7 +500,7 @@ export function CtaBand() {
         <div className="flex items-center gap-4">
           <Link
             to="/contacto"
-            className="inline-flex items-center gap-2 rounded-md bg-primary-mid px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             Solicitar asesoría <ArrowRight className="h-4 w-4" />
           </Link>

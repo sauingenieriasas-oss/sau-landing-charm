@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
           areaServed: "CO",
           telephone: "+573015162267",
           email: "ventas@sauingenieria.co",
-          slogan: "Innovación, sostenibilidad y economía",
+          slogan: "innovación, sostenibilidad y economía",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Cra 46 #84-8",

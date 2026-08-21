@@ -21,7 +21,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             {SERVICES.slice(0, 5).map((s) => (
               <li key={s.id}>
-                <Link to="/servicios" hash={s.id} className="hover:text-lime">
+                <Link to="/servicios" hash={s.id} className="hover:text-primary">
                   {s.title}
                 </Link>
               </li>
@@ -33,27 +33,27 @@ export function SiteFooter() {
           <h3 className="text-sm font-semibold uppercase tracking-wide text-lime">Empresa</h3>
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             <li>
-              <Link to="/" hash="nosotros" className="hover:text-lime">
+              <Link to="/" hash="nosotros" className="hover:text-primary">
                 Nosotros
               </Link>
             </li>
             <li>
-              <Link to="/" hash="mision" className="hover:text-lime">
-                Misión y visión
-              </Link>
-            </li>
-            <li>
-              <Link to="/" hash="sectores" className="hover:text-lime">
-                Sectores que atendemos
-              </Link>
-            </li>
-            <li>
-              <Link to="/" hash="productos" className="hover:text-lime">
+              <Link to="/" hash="productos" className="hover:text-primary">
                 Productos
               </Link>
             </li>
             <li>
-              <Link to="/contacto" className="hover:text-lime">
+              <Link to="/" hash="mision" className="hover:text-primary">
+                Misión y visión
+              </Link>
+            </li>
+            <li>
+              <Link to="/" hash="sectores" className="hover:text-primary">
+                Sectores
+              </Link>
+            </li>
+            <li>
+              <Link to="/contacto" className="hover:text-primary">
                 Contacto
               </Link>
             </li>
@@ -64,16 +64,13 @@ export function SiteFooter() {
           <h3 className="text-sm font-semibold uppercase tracking-wide text-lime">Contacto</h3>
           <ul className="mt-4 space-y-3 text-sm text-navy-foreground/75">
             <li className="flex items-start gap-2">
-              <Phone className="mt-0.5 h-4 w-4 text-lime" /> {CONTACT.phone}
+              <Phone className="mt-0.5 h-4 w-4 text-primary" /> {CONTACT.phone}
             </li>
             <li className="flex items-start gap-2">
-              <Mail className="mt-0.5 h-4 w-4 text-lime" />
-              <a href={`mailto:${CONTACT.email}`} className="hover:text-lime">
-                {CONTACT.email}
-              </a>
+              <Mail className="mt-0.5 h-4 w-4 text-primary" /> {CONTACT.email}
             </li>
             <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 text-lime" />
+              <MapPin className="mt-0.5 h-4 w-4 text-primary" />
               <span>
                 {CONTACT.address}
                 <br />
