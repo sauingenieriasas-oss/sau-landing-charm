@@ -11,9 +11,8 @@ export function SiteFooter() {
         <div>
           <LogoInverted />
           <p className="mt-4 max-w-xs text-sm text-navy-foreground/70">
-            {COMPANY.legalName}. Empresa barranquillera con presencia en gran parte del territorio
-            colombiano, con soluciones técnicas, químicas y biotecnológicas para procesos de agua
-            más eficientes y sostenibles.
+            {COMPANY.legalName}. Empresa barranquillera con presencia en gran parte del territorio colombiano, con
+            soluciones técnicas, químicas y biotecnológicas para procesos de agua más eficientes y sostenibles.
           </p>
         </div>
 
@@ -62,7 +61,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-lime">Contacto</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-white">Contacto</h3>
           <ul className="mt-4 space-y-3 text-sm text-navy-foreground/75">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 text-primary" /> {CONTACT.phone}
@@ -72,12 +71,7 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-2">
               <Instagram className="mt-0.5 h-4 w-4 text-primary" />
-              <a
-                href={CONTACT.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
+              <a href={CONTACT.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
                 @{CONTACT.instagramUser}
               </a>
             </li>
@@ -94,8 +88,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-navy-foreground/15 px-4 py-5 text-center text-xs text-navy-foreground/60">
-        © {new Date().getFullYear()} {COMPANY.legalName} — {COMPANY.brand}. Todos los derechos
-        reservados.
+        © {new Date().getFullYear()} {COMPANY.legalName} — {COMPANY.brand}. Todos los derechos reservados.
       </div>
     </footer>
   );
