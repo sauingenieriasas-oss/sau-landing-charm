@@ -12,8 +12,9 @@ export const CONTACT = {
   whatsappNumber: WHATSAPP_NUMBER,
   email: "ventas@sauingenieria.co",
   phone: "+57 301 516 2267",
-  address: "Bodega: Cra 46 #84-8",
+  address: "Bodega: Cra 46 #84-8, Barranquilla",
   city: "Colombia",
+  coverage: "Empresa barranquillera con presencia en gran parte del territorio colombiano",
 };
 
 export function whatsappLink(message?: string) {
@@ -121,15 +122,44 @@ export const COMMITMENTS = [
 
 export const PRODUCTS = [
   {
-    name: "SUFLOC 379",
-    description: "Coagulante inorgánico de alto desempeño para tratamiento de agua.",
+    icon: "droplet",
+    name: "Coagulantes",
+    description: "Marcas propias de la línea SUFLOC y coagulantes genéricos.",
   },
   {
-    name: "SUFLOC 390",
-    description: "Polímero aniónico de alta eficiencia para clarificación y deshidratación.",
+    icon: "layers",
+    name: "Floculantes",
+    description: "Para agua potable, aguas residuales y deshidratación de lodos.",
   },
   {
-    name: "Hipoclorito de sodio 15%",
-    description: "Desinfectante eficaz para sistemas de potabilización y saneamiento.",
+    icon: "waves",
+    name: "Antiespumantes",
+    description: "Control de espuma en procesos industriales y sistemas de tratamiento.",
   },
-];
+  {
+    icon: "gauge",
+    name: "Ajustadores de pH",
+    description: "Alcalinizantes y acidificantes para estabilizar el proceso.",
+  },
+  {
+    icon: "sparkles",
+    name: "Limpiadores y antiincrustantes para osmosis inversa",
+    description: "Protección y limpieza de membranas para extender su vida útil.",
+  },
+  {
+    icon: "droplets",
+    name: "Ablandadores de agua potable",
+    description: "Reducción de dureza para proteger equipos y redes.",
+  },
+  {
+    icon: "shield",
+    name: "Biocidas",
+    description: "Control microbiológico en circuitos de agua y procesos industriales.",
+  },
+  {
+    icon: "sprout",
+    name: "Biotecnologías",
+    description: "Consorcios y nutrientes biológicos para sistemas de tratamiento.",
+  },
+] as const;
+

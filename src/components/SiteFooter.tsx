@@ -11,8 +11,9 @@ export function SiteFooter() {
         <div>
           <LogoInverted />
           <p className="mt-4 max-w-xs text-sm text-navy-foreground/70">
-            {COMPANY.legalName}. Soluciones técnicas, químicas y biotecnológicas para procesos de
-            agua más eficientes y sostenibles.
+            {COMPANY.legalName}. Empresa barranquillera con presencia en gran parte del territorio
+            colombiano, con soluciones técnicas, químicas y biotecnológicas para procesos de agua
+            más eficientes y sostenibles.
           </p>
         </div>
 
@@ -74,7 +75,7 @@ export function SiteFooter() {
               <span>
                 {CONTACT.address}
                 <br />
-                Presencia en todo {CONTACT.city}
+                Presencia en gran parte de {CONTACT.city}
               </span>
             </li>
           </ul>

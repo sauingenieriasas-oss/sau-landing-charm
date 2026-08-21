@@ -7,28 +7,28 @@ import {
   ClipboardList,
   Cpu,
   Droplet,
+  Droplets,
   Eye,
-  FileText,
   FlaskConical,
   Gauge,
   HandHeart,
+  Layers,
   Lightbulb,
-  MapPin,
   Recycle,
   Settings,
   ShieldCheck,
+  ShieldPlus,
+  Sparkles,
   Sprout,
   Target,
   Trash2,
   TrendingUp,
   Users,
+  Waves,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-planta-sau.jpg.asset.json";
+import bannerImg from "@/assets/banner-inicio-sau.png.asset.json";
 import sobreImg from "@/assets/sobre-planta-sau.jpg.asset.json";
-import tamborImg from "@/assets/producto-tambor.png";
-import ibcImg from "@/assets/producto-ibc.png";
-import garrafaImg from "@/assets/producto-garrafa.png";
 import {
   COMMITMENTS,
   COMPANY,
@@ -53,6 +53,17 @@ export const SERVICE_ICONS = {
   beaker: Beaker,
 } as const;
 
+const PRODUCT_ICONS = {
+  droplet: Droplet,
+  layers: Layers,
+  waves: Waves,
+  gauge: Gauge,
+  sparkles: Sparkles,
+  droplets: Droplets,
+  shield: ShieldPlus,
+  sprout: Sprout,
+} as const;
+
 function SectionLabel({ children }: { children: string }) {
   return (
     <p className="text-center text-sm font-bold uppercase tracking-[0.14em] text-primary">
@@ -63,63 +74,50 @@ function SectionLabel({ children }: { children: string }) {
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-8 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:pb-16 lg:pt-14">
-        <div>
-          <h1 className="text-4xl font-extrabold leading-[1.08] text-navy sm:text-5xl">
-            Ingeniería que <span className="text-primary">optimiza</span>,{" "}
-            <span className="text-primary-mid">transforma</span> y{" "}
-            <span className="text-navy">protege</span>.
-          </h1>
-          <div className="mt-6 flex gap-1">
-            <span className="h-1 w-14 bg-primary" />
-            <span className="h-1 w-10 bg-primary-mid" />
-            <span className="h-1 w-6 bg-lime" />
-          </div>
-          <p className="mt-6 max-w-md text-base text-muted-foreground">
-            Mejoramos el rendimiento de tus plantas actuales{" "}
-            <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>,
-            multiplicando su eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
-          </p>
-          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.12em] text-brown">
-            {COMPANY.slogan}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              to="/contacto"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
-            >
-              Solicitar asesoría <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/servicios"
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-accent"
-            >
-              Ver servicios <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
+    <section className="bg-background">
+      <div className="relative w-full lg:min-h-[52vw]">
+        <img
+          src={bannerImg.url}
+          alt="SAU Ingeniería — planta industrial de tratamiento de agua"
+          width={1727}
+          height={907}
+          className="w-full lg:absolute lg:inset-0 lg:h-full lg:object-cover lg:object-right"
+        />
 
-        <div className="relative">
-          <img
-            src={heroImg.url}
-            alt="Planta de tratamiento de agua optimizada por SAU Ingeniería"
-            width={780}
-            height={900}
-            className="h-[280px] w-full rounded-lg object-cover sm:h-[380px] lg:h-[460px]"
-          />
-          <div
-            className="absolute -bottom-3 right-0 h-16 w-2/3 bg-primary"
-            style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
-          />
-          <div
-            className="absolute -bottom-3 right-0 h-10 w-1/2 bg-navy"
-            style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
-          />
+        <div className="relative mx-auto max-w-7xl px-4 py-10 lg:px-8 lg:pb-16 lg:pt-[24%]">
+          <div className="max-w-xl rounded-lg lg:max-w-md lg:bg-background/70 lg:p-6 lg:backdrop-blur-sm">
+            <h1 className="text-3xl font-extrabold uppercase leading-[1.12] text-navy sm:text-4xl">
+              Ingeniería que <span className="text-primary">transforma problemas</span> en soluciones
+            </h1>
+            <div className="mt-5 flex gap-1">
+              <span className="h-1 w-14 bg-primary" />
+              <span className="h-1 w-10 bg-primary-mid" />
+              <span className="h-1 w-6 bg-lime" />
+            </div>
+            <p className="mt-5 text-base text-muted-foreground">
+              Mejoramos el rendimiento de tus plantas actuales{" "}
+              <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>,
+              multiplicando su eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-4">
+              <Link
+                to="/contacto"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
+              >
+                Solicitar asesoría <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/servicios"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-accent"
+              >
+                Ver servicios <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-6 px-4 pb-14 sm:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 py-12 sm:grid-cols-3 lg:px-8">
         {[
           {
             Icon: Users,
@@ -146,7 +144,7 @@ export function HeroSection() {
             >
               <Icon className="h-6 w-6" />
             </span>
-            <div>
+            <div className="min-w-0">
               <h3 className="text-sm font-bold text-navy">{title}</h3>
               <p className="text-sm text-muted-foreground">{text}</p>
             </div>
@@ -308,10 +306,11 @@ export function AboutSection() {
             Ingeniería con propósito, resultados que se ven.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-            {COMPANY.legalName} es una empresa colombiana especializada en soluciones de ingeniería
-            ambiental, tratamiento de agua y optimización de procesos industriales. Convertimos tus
-            desafíos en oportunidades de mejora continua, con soluciones técnicas, químicas y
-            biotecnológicas y acompañamiento en cada etapa del proyecto.
+            {COMPANY.legalName} es una empresa barranquillera, con presencia en gran parte del
+            territorio colombiano, especializada en soluciones de ingeniería ambiental, tratamiento
+            de agua y optimización de procesos industriales. Convertimos tus desafíos en
+            oportunidades de mejora continua, con soluciones técnicas, químicas y biotecnológicas y
+            acompañamiento en cada etapa del proyecto.
           </p>
           <Link
             to="/servicios"
@@ -369,61 +368,63 @@ export function AboutSection() {
   );
 }
 
-const PRODUCT_IMAGES = [tamborImg, ibcImg, garrafaImg];
-
 export function ProductsSection() {
   return (
     <section id="productos" className="bg-background py-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <SectionLabel>Productos destacados</SectionLabel>
+        <SectionLabel>Nuestros productos</SectionLabel>
         <h2 className="mt-3 text-center text-3xl font-bold text-navy sm:text-4xl">
           Insumos químicos y biotecnológicos de alta calidad
         </h2>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          <div className="grid gap-0 divide-y divide-border rounded-lg border border-border bg-card sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:col-span-2">
-            {PRODUCTS.map((product, i) => (
-              <article key={product.name} className="flex gap-3 p-5">
-                <img
-                  src={PRODUCT_IMAGES[i]}
-                  alt={product.name}
-                  loading="lazy"
-                  width={700}
-                  height={700}
-                  className="h-20 w-16 shrink-0 object-contain"
-                />
-                <div>
-                  <h3 className="text-sm font-bold uppercase text-navy">{product.name}</h3>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                    {product.description}
-                  </p>
-                </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {PRODUCTS.map((product) => {
+            const Icon = PRODUCT_ICONS[product.icon];
+            return (
+              <article
+                key={product.name}
+                className="rounded-lg border border-border bg-card p-5 transition-shadow hover:shadow-md"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-mid text-primary-foreground">
+                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                </span>
+                <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-primary">
+                  {product.name}
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  {product.description}
+                </p>
               </article>
-            ))}
-          </div>
+            );
+          })}
+        </div>
 
-          <div className="rounded-lg bg-muted p-6">
-            <Beaker className="h-9 w-9 text-primary" strokeWidth={1.5} />
-            <h3 className="mt-4 text-lg font-bold leading-snug text-navy">
-              ¿No sabes qué producto necesitas?
-            </h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Te ayudamos a encontrar la solución ideal para tu proceso.
-            </p>
-            <a
-              href={whatsappLink("Hola SAU Ingeniería, quiero cotizar insumos químicos.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
-            >
-              Cotizar ahora <ArrowRight className="h-4 w-4" />
-            </a>
+        <div className="mt-8 flex flex-col items-start gap-5 rounded-lg bg-muted p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-4">
+            <Beaker className="h-9 w-9 shrink-0 text-primary" strokeWidth={1.5} />
+            <div>
+              <h3 className="text-lg font-bold leading-snug text-navy">
+                ¿No sabes qué producto necesitas?
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Te ayudamos a encontrar la solución ideal para tu proceso.
+              </p>
+            </div>
           </div>
+          <a
+            href={whatsappLink("Hola SAU Ingeniería, quiero cotizar insumos químicos.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
+          >
+            Cotizar ahora <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>
   );
 }
+
 
 export function BrandEssence() {
   return (
@@ -464,28 +465,6 @@ export function CommitmentsBand() {
   );
 }
 
-export function StatsBand() {
-  return (
-    <section id="casos" className="bg-navy py-12 text-navy-foreground">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-        {[
-          { Icon: Users, value: "+50", label: "Clientes satisfechos" },
-          { Icon: FileText, value: "+80", label: "Proyectos ejecutados" },
-          { Icon: Droplet, value: "+100", label: "Sistemas optimizados" },
-          { Icon: MapPin, value: "Presencia en", label: "todo Colombia" },
-        ].map(({ Icon, value, label }) => (
-          <div key={label} className="flex items-center gap-4">
-            <Icon className="h-10 w-10 text-lime" strokeWidth={1.5} />
-            <div>
-              <p className="font-display text-2xl font-extrabold leading-none">{value}</p>
-              <p className="text-sm text-navy-foreground/70">{label}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 export function CtaBand() {
   return (
