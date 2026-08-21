@@ -464,28 +464,6 @@ export function CommitmentsBand() {
   );
 }
 
-export function StatsBand() {
-  return (
-    <section id="casos" className="bg-navy py-12 text-navy-foreground">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-        {[
-          { Icon: Users, value: "+50", label: "Clientes satisfechos" },
-          { Icon: FileText, value: "+80", label: "Proyectos ejecutados" },
-          { Icon: Droplet, value: "+100", label: "Sistemas optimizados" },
-          { Icon: MapPin, value: "Presencia en", label: "todo Colombia" },
-        ].map(({ Icon, value, label }) => (
-          <div key={label} className="flex items-center gap-4">
-            <Icon className="h-10 w-10 text-lime" strokeWidth={1.5} />
-            <div>
-              <p className="font-display text-2xl font-extrabold leading-none">{value}</p>
-              <p className="text-sm text-navy-foreground/70">{label}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 export function CtaBand() {
   return (
