@@ -80,22 +80,28 @@
   --card-foreground: oklch(0.24 0.06 254);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.24 0.06 254);
-  /* Verde SAU */
-  --primary: oklch(0.53 0.15 148);
+  /* Verde oscuro SAU — #007833 (letra S) */
+  --primary: oklch(0.5002 0.1396 149.5);
   --primary-foreground: oklch(0.99 0.005 150);
-  --primary-dark: oklch(0.44 0.13 148);
-  /* Azul marino corporativo */
-  --navy: oklch(0.33 0.08 250);
-  --navy-foreground: oklch(0.99 0.005 250);
-  /* Dorado */
-  --gold: oklch(0.63 0.09 75);
-  --gold-foreground: oklch(0.99 0.005 90);
+  --primary-dark: oklch(0.415 0.1142 150);
+  /* Verde medio SAU — #63A63C (letra A) */
+  --primary-mid: oklch(0.6577 0.1557 135.8);
+  /* Verde lima SAU — #8DC63F (letra U) */
+  --lime: oklch(0.761 0.1736 129.6);
+  --lime-foreground: oklch(0.24 0.05 150);
+  /* Azul petróleo SAU — #18637F (INGENIERÍA) */
+  --navy: oklch(0.4689 0.0827 228.3);
+  --navy-foreground: oklch(0.99 0.005 230);
+  --navy-dark: oklch(0.3942 0.0706 228.5);
+  /* Marrón SAU — #5E3D22 (eslogan) */
+  --brown: oklch(0.392 0.0616 58.9);
+  --brown-foreground: oklch(0.99 0.005 80);
   --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.33 0.08 250);
+  --secondary-foreground: oklch(0.4689 0.0827 228.3);
   --muted: oklch(0.97 0.008 150);
-  --muted-foreground: oklch(0.52 0.03 250);
+  --muted-foreground: oklch(0.5 0.02 228);
   --accent: oklch(0.96 0.02 150);
-  --accent-foreground: oklch(0.33 0.08 250);
+  --accent-foreground: oklch(0.4689 0.0827 228.3);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
