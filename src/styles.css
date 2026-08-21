@@ -35,10 +35,14 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-mid: var(--primary-mid);
+  --color-lime: var(--lime);
+  --color-lime-foreground: var(--lime-foreground);
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
-  --color-gold: var(--gold);
-  --color-gold-foreground: var(--gold-foreground);
+  --color-navy-dark: var(--navy-dark);
+  --color-brown: var(--brown);
+  --color-brown-foreground: var(--brown-foreground);
   --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --color-secondary: var(--secondary);
