@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/ContactForm";
 import { WhatsappGlyph } from "@/components/SiteHeader";
@@ -53,6 +53,17 @@ function ContactoPage() {
                   <Mail className="h-4 w-4 text-primary" />
                   <a href={`mailto:${CONTACT.email}`} className="hover:text-primary">
                     {CONTACT.email}
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Instagram className="h-4 w-4 text-primary" />
+                  <a
+                    href={CONTACT.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
+                    @{CONTACT.instagramUser}
                   </a>
                 </li>
                 <li className="flex items-center gap-3">

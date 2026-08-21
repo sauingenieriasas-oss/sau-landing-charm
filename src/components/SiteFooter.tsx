@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 import { LogoInverted } from "./Logo";
 import { COMPANY, CONTACT, SERVICES } from "@/lib/site";
@@ -69,6 +69,17 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 text-primary" /> {CONTACT.email}
+            </li>
+            <li className="flex items-start gap-2">
+              <Instagram className="mt-0.5 h-4 w-4 text-primary" />
+              <a
+                href={CONTACT.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                @{CONTACT.instagramUser}
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 text-primary" />

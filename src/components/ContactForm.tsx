@@ -8,13 +8,13 @@ export function ContactForm() {
 
   function buildMessage(data: FormData) {
     return [
-      "Hola SAU Ingeniería, quiero solicitar una asesoría.",
-      `Nombre: ${data.get("nombre")}`,
-      `Empresa: ${data.get("empresa") || "—"}`,
+      "Hola SAU Ingeniería, quiero contarles mi proyecto.",
+      `Nombre del contacto: ${data.get("nombre")}`,
+      `Empresa: ${data.get("empresa")}`,
+      `Teléfono: ${data.get("telefono")}`,
       `Correo: ${data.get("correo")}`,
-      `Teléfono: ${data.get("telefono") || "—"}`,
       `Servicio de interés: ${data.get("servicio")}`,
-      `Mensaje: ${data.get("mensaje")}`,
+      `Resumen del caso: ${data.get("caso")}`,
     ].join("\n");
   }
 
@@ -27,16 +27,16 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="rounded-lg border border-border bg-card p-6">
-      <h2 className="text-xl font-bold text-navy">Solicitar asesoría</h2>
+      <h2 className="text-xl font-bold text-navy">Cuéntanos tu proyecto</h2>
       <p className="mt-1 text-sm text-muted-foreground">
         Completa el formulario y enviaremos tu solicitud por WhatsApp con todos los datos.
       </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <Field label="Nombre completo" name="nombre" required />
-        <Field label="Empresa" name="empresa" />
+        <Field label="Nombre del contacto" name="nombre" required />
+        <Field label="Nombre de la empresa" name="empresa" required />
+        <Field label="Teléfono" name="telefono" type="tel" required />
         <Field label="Correo electrónico" name="correo" type="email" required />
-        <Field label="Teléfono" name="telefono" type="tel" />
 
         <label className="sm:col-span-2 block text-sm font-medium text-navy">
           Servicio de interés
@@ -54,9 +54,9 @@ export function ContactForm() {
         </label>
 
         <label className="sm:col-span-2 block text-sm font-medium text-navy">
-          Mensaje
+          Resumen del caso
           <textarea
-            name="mensaje"
+            name="caso"
             rows={4}
             required
             placeholder="Cuéntanos brevemente tu necesidad o proceso."
