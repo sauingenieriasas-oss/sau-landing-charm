@@ -7,28 +7,28 @@ import {
   ClipboardList,
   Cpu,
   Droplet,
+  Droplets,
   Eye,
-  FileText,
   FlaskConical,
   Gauge,
   HandHeart,
+  Layers,
   Lightbulb,
-  MapPin,
   Recycle,
   Settings,
   ShieldCheck,
+  ShieldPlus,
+  Sparkles,
   Sprout,
   Target,
   Trash2,
   TrendingUp,
   Users,
+  Waves,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-planta-sau.jpg.asset.json";
+import bannerImg from "@/assets/banner-inicio-sau.png.asset.json";
 import sobreImg from "@/assets/sobre-planta-sau.jpg.asset.json";
-import tamborImg from "@/assets/producto-tambor.png";
-import ibcImg from "@/assets/producto-ibc.png";
-import garrafaImg from "@/assets/producto-garrafa.png";
 import {
   COMMITMENTS,
   COMPANY,
@@ -53,6 +53,17 @@ export const SERVICE_ICONS = {
   beaker: Beaker,
 } as const;
 
+const PRODUCT_ICONS = {
+  droplet: Droplet,
+  layers: Layers,
+  waves: Waves,
+  gauge: Gauge,
+  sparkles: Sparkles,
+  droplets: Droplets,
+  shield: ShieldPlus,
+  sprout: Sprout,
+} as const;
+
 function SectionLabel({ children }: { children: string }) {
   return (
     <p className="text-center text-sm font-bold uppercase tracking-[0.14em] text-primary">
@@ -63,63 +74,50 @@ function SectionLabel({ children }: { children: string }) {
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-8 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:pb-16 lg:pt-14">
-        <div>
-          <h1 className="text-4xl font-extrabold leading-[1.08] text-navy sm:text-5xl">
-            Ingeniería que <span className="text-primary">optimiza</span>,{" "}
-            <span className="text-primary-mid">transforma</span> y{" "}
-            <span className="text-navy">protege</span>.
-          </h1>
-          <div className="mt-6 flex gap-1">
-            <span className="h-1 w-14 bg-primary" />
-            <span className="h-1 w-10 bg-primary-mid" />
-            <span className="h-1 w-6 bg-lime" />
-          </div>
-          <p className="mt-6 max-w-md text-base text-muted-foreground">
-            Mejoramos el rendimiento de tus plantas actuales{" "}
-            <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>,
-            multiplicando su eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
-          </p>
-          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.12em] text-brown">
-            {COMPANY.slogan}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              to="/contacto"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
-            >
-              Solicitar asesoría <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/servicios"
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-accent"
-            >
-              Ver servicios <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
+    <section className="bg-background">
+      <div className="relative w-full lg:min-h-[52vw]">
+        <img
+          src={bannerImg.url}
+          alt="SAU Ingeniería — planta industrial de tratamiento de agua"
+          width={1727}
+          height={907}
+          className="w-full lg:absolute lg:inset-0 lg:h-full lg:object-cover lg:object-right"
+        />
 
-        <div className="relative">
-          <img
-            src={heroImg.url}
-            alt="Planta de tratamiento de agua optimizada por SAU Ingeniería"
-            width={780}
-            height={900}
-            className="h-[280px] w-full rounded-lg object-cover sm:h-[380px] lg:h-[460px]"
-          />
-          <div
-            className="absolute -bottom-3 right-0 h-16 w-2/3 bg-primary"
-            style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
-          />
-          <div
-            className="absolute -bottom-3 right-0 h-10 w-1/2 bg-navy"
-            style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
-          />
+        <div className="relative mx-auto max-w-7xl px-4 py-10 lg:px-8 lg:pb-16 lg:pt-[24%]">
+          <div className="max-w-xl lg:max-w-md">
+            <h1 className="text-3xl font-extrabold uppercase leading-[1.12] text-navy sm:text-4xl">
+              Ingeniería que <span className="text-primary">transforma problemas</span> en soluciones
+            </h1>
+            <div className="mt-5 flex gap-1">
+              <span className="h-1 w-14 bg-primary" />
+              <span className="h-1 w-10 bg-primary-mid" />
+              <span className="h-1 w-6 bg-lime" />
+            </div>
+            <p className="mt-5 text-base text-muted-foreground">
+              Mejoramos el rendimiento de tus plantas actuales{" "}
+              <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>,
+              multiplicando su eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-4">
+              <Link
+                to="/contacto"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
+              >
+                Solicitar asesoría <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/servicios"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-accent"
+              >
+                Ver servicios <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-6 px-4 pb-14 sm:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 py-12 sm:grid-cols-3 lg:px-8">
         {[
           {
             Icon: Users,
@@ -146,7 +144,7 @@ export function HeroSection() {
             >
               <Icon className="h-6 w-6" />
             </span>
-            <div>
+            <div className="min-w-0">
               <h3 className="text-sm font-bold text-navy">{title}</h3>
               <p className="text-sm text-muted-foreground">{text}</p>
             </div>
