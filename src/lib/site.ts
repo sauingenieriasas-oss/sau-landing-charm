@@ -15,6 +15,8 @@ export const CONTACT = {
   address: "Bodega: Cra 46 #84-8, Barranquilla",
   city: "Colombia",
   coverage: "Empresa barranquillera con presencia en gran parte del territorio colombiano",
+  instagramUser: "sauingenieriasas",
+  instagramUrl: "https://instagram.com/sauingenieriasas",
 };
 
 export function whatsappLink(message?: string) {
