@@ -85,7 +85,7 @@ export function HeroSection() {
         />
 
         <div className="relative mx-auto max-w-7xl px-4 py-10 lg:px-8 lg:pb-16 lg:pt-[24%]">
-          <div className="max-w-xl lg:max-w-md">
+          <div className="max-w-xl rounded-lg lg:max-w-md lg:bg-background/70 lg:p-6 lg:backdrop-blur-sm">
             <h1 className="text-3xl font-extrabold uppercase leading-[1.12] text-navy sm:text-4xl">
               Ingeniería que <span className="text-primary">transforma problemas</span> en soluciones
             </h1>
