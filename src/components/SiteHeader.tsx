@@ -9,8 +9,8 @@ const NAV: { label: string; to: "/" | "/servicios" | "/contacto"; hash?: string 
   { label: "Inicio", to: "/" },
   { label: "Nosotros", to: "/", hash: "nosotros" },
   { label: "Servicios", to: "/servicios" },
+  { label: "Sectores", to: "/", hash: "sectores" },
   { label: "Productos", to: "/", hash: "productos" },
-  { label: "Casos de éxito", to: "/", hash: "casos" },
   { label: "Contacto", to: "/contacto" },
 ];
 
@@ -20,9 +20,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 lg:px-8">
-        <Logo />
+        <Logo className="h-12 sm:h-14" />
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {NAV.map((item) => (
             <Link
               key={item.label}

@@ -56,6 +56,9 @@ function ContactoPage() {
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
+                  <MapPin className="h-4 w-4 text-primary" /> {CONTACT.address}
+                </li>
+                <li className="flex items-center gap-3">
                   <MapPin className="h-4 w-4 text-primary" /> Presencia en todo {CONTACT.city}
                 </li>
               </ul>

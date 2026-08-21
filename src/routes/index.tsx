@@ -2,30 +2,36 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import {
   AboutSection,
+  BrandEssence,
+  CommitmentsBand,
   CtaBand,
   HeroSection,
+  LixiviadosHighlight,
+  MissionVision,
   ProductsSection,
+  SectorsSection,
   ServicesGrid,
   StatsBand,
+  ValueProp,
 } from "@/components/sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SAU Ingeniería | Tratamiento de agua y procesos industriales" },
+      { title: "SAU Ingeniería | Tratamiento y optimización de agua en Colombia" },
       {
         name: "description",
         content:
-          "Soluciones Ambientales Unificadas SAS: tratamiento de agua, aguas residuales, optimización de procesos e insumos químicos y biotecnológicos en Colombia.",
+          "Soluciones Ambientales Unificadas SAS: optimizamos PTAP y PTAR, tratamos aguas residuales y lixiviados, y suministramos insumos químicos en Colombia.",
       },
       {
         property: "og:title",
-        content: "SAU Ingeniería | Tratamiento de agua y procesos industriales",
+        content: "SAU Ingeniería | Tratamiento y optimización de agua en Colombia",
       },
       {
         property: "og:description",
         content:
-          "Ingeniería que transforma problemas en soluciones: agua, procesos e insumos químicos con acompañamiento técnico.",
+          "Optimizamos lo que ya tienes y multiplicamos sus resultados: agua potable, aguas residuales, lixiviados, MBBR e insumos químicos.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -41,8 +47,15 @@ export const Route = createFileRoute("/")({
           alternateName: "SAU Ingeniería",
           areaServed: "CO",
           telephone: "+573015162267",
+          email: "ventas@sauingenieria.co",
+          slogan: "innovación, sostenibilidad y economía",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Cra 46 #84-8",
+            addressCountry: "CO",
+          },
           description:
-            "Soluciones técnicas y químicas para tratamiento de agua, aguas residuales y optimización de procesos industriales.",
+            "Soluciones técnicas, químicas y biotecnológicas para tratamiento de agua, aguas residuales, lixiviados y optimización de procesos industriales.",
         }),
       },
     ],
@@ -54,10 +67,16 @@ function Index() {
   return (
     <>
       <HeroSection />
+      <ValueProp />
       <ServicesGrid />
+      <LixiviadosHighlight />
       <AboutSection />
+      <MissionVision />
+      <SectorsSection />
       <ProductsSection />
       <StatsBand />
+      <BrandEssence />
+      <CommitmentsBand />
       <CtaBand />
     </>
   );
