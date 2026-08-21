@@ -1,23 +1,31 @@
 import { Link } from "@tanstack/react-router";
 
-export function Logo({ inverted = false }: { inverted?: boolean }) {
+import logo from "@/assets/logo-sau.png.asset.json";
+import { COMPANY } from "@/lib/site";
+
+export function Logo({ className = "h-12" }: { className?: string }) {
   return (
-    <Link to="/" className="flex flex-col leading-none">
-      <span className="font-display text-3xl font-extrabold tracking-tight">
-        <span className="text-primary">S</span>
-        <span className={inverted ? "text-navy-foreground" : "text-navy"}>A</span>
-        <span className="text-primary">U</span>
-      </span>
-      <span
-        className={`font-display text-sm font-semibold tracking-[0.18em] ${
-          inverted ? "text-navy-foreground" : "text-navy"
-        }`}
-      >
-        INGENIERÍA
-      </span>
-      <span className="mt-1 text-[9px] font-medium tracking-wide text-gold">
-        innovación, sostenibilidad y economía
-      </span>
+    <Link to="/" aria-label={`${COMPANY.brand} — inicio`} className="inline-flex shrink-0">
+      <img
+        src={logo.url}
+        alt={`${COMPANY.brand} — ${COMPANY.slogan}`}
+        width={637}
+        height={362}
+        className={`${className} w-auto`}
+      />
     </Link>
+  );
+}
+
+export function LogoInverted({ className = "h-16" }: { className?: string }) {
+  return (
+    <img
+      src={logo.url}
+      alt={`${COMPANY.brand} — ${COMPANY.slogan}`}
+      width={637}
+      height={362}
+      loading="lazy"
+      className={`${className} w-auto rounded-md bg-background p-2`}
+    />
   );
 }
