@@ -61,7 +61,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-white">Contacto</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-lime">Contacto</h3>
           <ul className="mt-4 space-y-3 text-sm text-navy-foreground/75">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 text-primary" /> {CONTACT.phone}
