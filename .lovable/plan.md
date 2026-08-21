@@ -1,5 +1,9 @@
 # Ajustes SAU Ingeniería
 
+Solo se tocan los 5 puntos indicados. Se conservan sin cambios: la paleta del PDF, la tipografía, los 9 servicios (incluido el bloque de tratamiento de lixiviados), la propuesta de valor, quiénes somos, misión, visión, sectores, esencia de marca y la banda de compromisos.
+
+
+
 ## 1. Hero con el banner proporcionado
 
 - Se usa la imagen `BANNER_PAGINA_INICIO_SAU.png` tal cual (sin generar ni editar nada) como fondo del Hero, a todo el ancho de la sección.
