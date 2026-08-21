@@ -75,17 +75,18 @@ function SectionLabel({ children }: { children: string }) {
 export function HeroSection() {
   return (
     <section className="bg-background">
-      <div className="relative w-full lg:min-h-[52vw]">
+      <div className="relative w-full">
         <img
           src={bannerImg.url}
           alt="SAU Ingeniería — planta industrial de tratamiento de agua"
           width={1727}
           height={907}
-          className="w-full lg:absolute lg:inset-0 lg:h-full lg:object-cover lg:object-right"
+          className="block h-auto w-full"
         />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-10 lg:px-8 lg:pb-16 lg:pt-[24%]">
+        <div className="mx-auto max-w-7xl px-4 py-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-8 lg:pb-[3%]">
           <div className="max-w-xl rounded-lg lg:max-w-md lg:bg-background/70 lg:p-6 lg:backdrop-blur-sm">
+
             <h1 className="text-3xl font-extrabold uppercase leading-[1.12] text-navy sm:text-4xl">
               Ingeniería que <span className="text-primary">transforma problemas</span> en soluciones
             </h1>
