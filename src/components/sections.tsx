@@ -440,12 +440,12 @@ export function BrandEssence() {
 }
 
 export function CommitmentsBand() {
-  const icons = [Sprout, Target, Users];
+  const icons = [Sprout, Target, Users] as const;
   return (
     <section className="bg-navy-dark py-10 text-navy-foreground">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-3 lg:px-8">
         {COMMITMENTS.map(({ title, highlight }, i) => {
-          const Icon = icons[i];
+          const Icon = icons[i % icons.length]!;
           return (
             <div key={title} className="flex items-center gap-4">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-lime text-lime-foreground">
