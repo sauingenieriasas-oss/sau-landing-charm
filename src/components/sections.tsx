@@ -306,10 +306,11 @@ export function AboutSection() {
             Ingeniería con propósito, resultados que se ven.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-            {COMPANY.legalName} es una empresa colombiana especializada en soluciones de ingeniería
-            ambiental, tratamiento de agua y optimización de procesos industriales. Convertimos tus
-            desafíos en oportunidades de mejora continua, con soluciones técnicas, químicas y
-            biotecnológicas y acompañamiento en cada etapa del proyecto.
+            {COMPANY.legalName} es una empresa barranquillera, con presencia en gran parte del
+            territorio colombiano, especializada en soluciones de ingeniería ambiental, tratamiento
+            de agua y optimización de procesos industriales. Convertimos tus desafíos en
+            oportunidades de mejora continua, con soluciones técnicas, químicas y biotecnológicas y
+            acompañamiento en cada etapa del proyecto.
           </p>
           <Link
             to="/servicios"

@@ -11,7 +11,6 @@ import {
   ProductsSection,
   SectorsSection,
   ServicesGrid,
-  StatsBand,
   ValueProp,
 } from "@/components/sections";
 
@@ -22,7 +21,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Soluciones Ambientales Unificadas SAS: optimizamos PTAP y PTAR, tratamos aguas residuales y lixiviados, y suministramos insumos químicos en Colombia.",
+          "Empresa barranquillera con presencia en gran parte de Colombia: optimizamos PTAP y PTAR, tratamos aguas residuales y lixiviados, y suministramos insumos químicos.",
       },
       {
         property: "og:title",
@@ -52,6 +51,8 @@ export const Route = createFileRoute("/")({
           address: {
             "@type": "PostalAddress",
             streetAddress: "Cra 46 #84-8",
+            addressLocality: "Barranquilla",
+            addressRegion: "Atlántico",
             addressCountry: "CO",
           },
           description:
@@ -74,7 +75,6 @@ function Index() {
       <MissionVision />
       <SectorsSection />
       <ProductsSection />
-      <StatsBand />
       <BrandEssence />
       <CommitmentsBand />
       <CtaBand />

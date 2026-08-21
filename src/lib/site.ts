@@ -12,8 +12,9 @@ export const CONTACT = {
   whatsappNumber: WHATSAPP_NUMBER,
   email: "ventas@sauingenieria.co",
   phone: "+57 301 516 2267",
-  address: "Bodega: Cra 46 #84-8",
+  address: "Bodega: Cra 46 #84-8, Barranquilla",
   city: "Colombia",
+  coverage: "Empresa barranquillera con presencia en gran parte del territorio colombiano",
 };
 
 export function whatsappLink(message?: string) {
