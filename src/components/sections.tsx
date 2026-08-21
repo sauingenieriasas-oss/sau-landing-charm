@@ -367,61 +367,63 @@ export function AboutSection() {
   );
 }
 
-const PRODUCT_IMAGES = [tamborImg, ibcImg, garrafaImg];
-
 export function ProductsSection() {
   return (
     <section id="productos" className="bg-background py-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <SectionLabel>Productos destacados</SectionLabel>
+        <SectionLabel>Nuestros productos</SectionLabel>
         <h2 className="mt-3 text-center text-3xl font-bold text-navy sm:text-4xl">
           Insumos químicos y biotecnológicos de alta calidad
         </h2>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          <div className="grid gap-0 divide-y divide-border rounded-lg border border-border bg-card sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:col-span-2">
-            {PRODUCTS.map((product, i) => (
-              <article key={product.name} className="flex gap-3 p-5">
-                <img
-                  src={PRODUCT_IMAGES[i]}
-                  alt={product.name}
-                  loading="lazy"
-                  width={700}
-                  height={700}
-                  className="h-20 w-16 shrink-0 object-contain"
-                />
-                <div>
-                  <h3 className="text-sm font-bold uppercase text-navy">{product.name}</h3>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                    {product.description}
-                  </p>
-                </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {PRODUCTS.map((product) => {
+            const Icon = PRODUCT_ICONS[product.icon];
+            return (
+              <article
+                key={product.name}
+                className="rounded-lg border border-border bg-card p-5 transition-shadow hover:shadow-md"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-mid text-primary-foreground">
+                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                </span>
+                <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-primary">
+                  {product.name}
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  {product.description}
+                </p>
               </article>
-            ))}
-          </div>
+            );
+          })}
+        </div>
 
-          <div className="rounded-lg bg-muted p-6">
-            <Beaker className="h-9 w-9 text-primary" strokeWidth={1.5} />
-            <h3 className="mt-4 text-lg font-bold leading-snug text-navy">
-              ¿No sabes qué producto necesitas?
-            </h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Te ayudamos a encontrar la solución ideal para tu proceso.
-            </p>
-            <a
-              href={whatsappLink("Hola SAU Ingeniería, quiero cotizar insumos químicos.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
-            >
-              Cotizar ahora <ArrowRight className="h-4 w-4" />
-            </a>
+        <div className="mt-8 flex flex-col items-start gap-5 rounded-lg bg-muted p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-4">
+            <Beaker className="h-9 w-9 shrink-0 text-primary" strokeWidth={1.5} />
+            <div>
+              <h3 className="text-lg font-bold leading-snug text-navy">
+                ¿No sabes qué producto necesitas?
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Te ayudamos a encontrar la solución ideal para tu proceso.
+              </p>
+            </div>
           </div>
+          <a
+            href={whatsappLink("Hola SAU Ingeniería, quiero cotizar insumos químicos.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
+          >
+            Cotizar ahora <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>
   );
 }
+
 
 export function BrandEssence() {
   return (
