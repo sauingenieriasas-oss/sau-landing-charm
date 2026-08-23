@@ -65,11 +65,7 @@ const PRODUCT_ICONS = {
 } as const;
 
 function SectionLabel({ children }: { children: string }) {
-  return (
-    <p className="text-center text-sm font-bold uppercase tracking-[0.14em] text-primary">
-      {children}
-    </p>
-  );
+  return <p className="text-center text-sm font-bold uppercase tracking-[0.14em] text-primary">{children}</p>;
 }
 
 export function HeroSection() {
@@ -86,7 +82,6 @@ export function HeroSection() {
 
         <div className="mx-auto max-w-7xl px-4 py-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-8 lg:pb-[3%]">
           <div className="max-w-xl rounded-lg lg:max-w-md lg:bg-background/70 lg:p-6 lg:backdrop-blur-sm">
-
             <h1 className="text-3xl font-extrabold uppercase leading-[1.12] text-navy sm:text-4xl">
               Ingeniería que <span className="text-primary">transforma problemas</span> en soluciones
             </h1>
@@ -96,9 +91,9 @@ export function HeroSection() {
               <span className="h-1 w-6 bg-lime" />
             </div>
             <p className="mt-5 text-base text-muted-foreground">
-              Mejoramos el rendimiento de tus plantas actuales{" "}
-              <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>,
-              multiplicando su eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
+              Mejoramos el rendimiento de tu planta{" "}
+              <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>, multiplicando su
+              eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
             </p>
             <div className="mt-7 flex flex-wrap gap-4">
               <Link
@@ -162,12 +157,10 @@ export function ValueProp() {
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2 lg:px-8">
         <div>
           <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
-            Optimizamos <span className="text-lime">lo que ya tienes</span>, multiplicamos sus
-            resultados.
+            Optimizamos <span className="text-lime">lo que ya tienes</span>, multiplicamos sus resultados.
           </h2>
           <p className="mt-4 max-w-lg text-sm text-navy-foreground/75">
-            Sin cambiar tu planta: más eficiencia, menos costo. Mejoramos lo que ya importa en tu
-            operación.
+            Sin cambiar tu planta: más eficiencia, menos costo. Mejoramos lo que ya importa en tu operación.
           </p>
         </div>
         <ul className="space-y-4">
@@ -203,12 +196,8 @@ export function ServicesGrid() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </span>
-                <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-primary">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  {service.short}
-                </p>
+                <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-primary">{service.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{service.short}</p>
               </article>
             );
           })}
@@ -235,14 +224,11 @@ export function LixiviadosHighlight() {
           <Trash2 className="h-8 w-8" strokeWidth={1.5} />
         </span>
         <div>
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary-mid">
-            Somos expertos en
-          </p>
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary-mid">Somos expertos en</p>
           <h2 className="mt-1 text-2xl font-bold text-navy">Tratamiento de lixiviados</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Soluciones para el tratamiento de lixiviados en rellenos sanitarios y
-            estaciones de transferencia, con esquemas físico-químicos y biológicos diseñados para
-            cargas altamente contaminantes.
+            Soluciones para el tratamiento de lixiviados en rellenos sanitarios y estaciones de transferencia, con
+            esquemas físico-químicos y biológicos diseñados para cargas altamente contaminantes.
           </p>
         </div>
       </div>
@@ -300,18 +286,15 @@ export function AboutSection() {
     <section id="nosotros" className="bg-background py-16">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-3 lg:px-8">
         <div>
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">
-            Sobre SAU Ingeniería
-          </p>
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">Sobre SAU Ingeniería</p>
           <h2 className="mt-3 text-3xl font-bold leading-tight text-navy">
             Ingeniería con propósito, resultados que se ven.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-            {COMPANY.legalName} es una empresa barranquillera, que lleva soluciones a gran parte del
-            territorio colombiano, especializada en soluciones de ingeniería ambiental, tratamiento
-            de agua y optimización de procesos industriales. Convertimos tus desafíos en
-            oportunidades de mejora continua, con soluciones técnicas, químicas y biotecnológicas y
-            acompañamiento en cada etapa del proyecto.
+            {COMPANY.legalName} es una empresa barranquillera, que lleva soluciones a gran parte del territorio
+            colombiano, especializada en soluciones de ingeniería ambiental, tratamiento de agua y optimización de
+            procesos industriales. Convertimos tus desafíos en oportunidades de mejora continua, con soluciones
+            técnicas, químicas y biotecnológicas y acompañamiento en cada etapa del proyecto.
           </p>
           <Link
             to="/servicios"
@@ -389,12 +372,8 @@ export function ProductsSection() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-mid text-primary-foreground">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </span>
-                <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-primary">
-                  {product.name}
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  {product.description}
-                </p>
+                <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-primary">{product.name}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{product.description}</p>
               </article>
             );
           })}
@@ -404,9 +383,7 @@ export function ProductsSection() {
           <div className="flex items-start gap-4">
             <Beaker className="h-9 w-9 shrink-0 text-primary" strokeWidth={1.5} />
             <div>
-              <h3 className="text-lg font-bold leading-snug text-navy">
-                ¿No sabes qué producto necesitas?
-              </h3>
+              <h3 className="text-lg font-bold leading-snug text-navy">¿No sabes qué producto necesitas?</h3>
               <p className="mt-1 text-sm text-muted-foreground">
                 Te ayudamos a encontrar la solución ideal para tu proceso.
               </p>
@@ -425,7 +402,6 @@ export function ProductsSection() {
     </section>
   );
 }
-
 
 export function BrandEssence() {
   return (
@@ -465,7 +441,6 @@ export function CommitmentsBand() {
     </section>
   );
 }
-
 
 export function CtaBand() {
   return (
