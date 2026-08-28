@@ -83,8 +83,7 @@ export function HeroSection() {
         <div className="mx-auto max-w-7xl px-4 py-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-8 lg:pb-[3%]">
           <div className="max-w-xl rounded-lg lg:max-w-md lg:bg-background/70 lg:p-6 lg:backdrop-blur-sm">
             <h1 className="text-3xl font-extrabold uppercase leading-[1.12] text-navy sm:text-4xl">
-              Ingeniería que <span className="text-primary">transforma </span> problemas en{" "}
-              <span className="text-primary"> soluciones </span>
+              INGENIERÍA QUE TRANSFORMA PROBLEMAS EN SOLUCIONES
             </h1>
             <div className="mt-5 flex gap-1">
               <span className="h-1 w-14 bg-primary" />
@@ -93,7 +92,7 @@ export function HeroSection() {
             </div>
             <p className="mt-5 text-base text-muted-foreground">
               Mejoramos el rendimiento de tu planta{" "}
-              <strong className="font-semibold text-primary">sin necesidad de cambiarlas</strong>, multiplicando su
+              <strong className="font-semibold text-primary">sin necesidad de cambiarla</strong>, multiplicando su
               eficiencia, reduciendo costos y asegurando el cumplimiento ambiental.
             </p>
             <div className="mt-7 flex flex-wrap gap-4">
