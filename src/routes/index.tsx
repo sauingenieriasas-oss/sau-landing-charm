@@ -10,6 +10,7 @@ import {
   MissionVision,
   ProductsSection,
   SectorsSection,
+  SeguimientoSection,
   ServicesGrid,
   ValueProp,
 } from "@/components/sections";
@@ -70,6 +71,7 @@ function Index() {
       <HeroSection />
       <ValueProp />
       <ServicesGrid />
+      <SeguimientoSection />
       <LixiviadosHighlight />
       <AboutSection />
       <MissionVision />

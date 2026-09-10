@@ -28,6 +28,10 @@ import {
 } from "lucide-react";
 
 import bannerImg from "@/assets/banner-inicio-sau.png.asset.json";
+import equipoImg from "@/assets/equipo-sau.jpg.asset.json";
+import lixiviados1Img from "@/assets/lixiviados-1.png.asset.json";
+import lixiviados2Img from "@/assets/lixiviados-2.png.asset.json";
+import seguimientoImg from "@/assets/seguimiento-aplicaciones.png.asset.json";
 import sobreImg from "@/assets/sobre-planta-sau.jpg.asset.json";
 import {
   COMMITMENTS,
@@ -216,20 +220,73 @@ export function ServicesGrid() {
   );
 }
 
+export function SeguimientoSection() {
+  return (
+    <section id="seguimiento" className="bg-background py-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:px-8">
+        <img
+          src={seguimientoImg.url}
+          alt="Monitoreo en tiempo real de plantas de tratamiento de agua"
+          loading="lazy"
+          className="h-72 w-full rounded-lg object-cover lg:h-96"
+        />
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">Seguimiento a nuestras aplicaciones</p>
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl">
+            Control y acompañamiento de cada aplicación
+          </h2>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            Acompañamos cada implementación con monitoreo de variables, análisis de resultados y ajustes técnicos que
+            garantizan el desempeño esperado. Nuestro seguimiento permite tomar decisiones a tiempo, mantener la
+            estabilidad del proceso y asegurar el cumplimiento ambiental.
+          </p>
+          <ul className="mt-6 space-y-3">
+            {[
+              "Monitoreo de variables críticas en tiempo real",
+              "Análisis de tendencias y reportes de desempeño",
+              "Ajustes de dosificación y operación según resultados",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-sm font-medium text-navy">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function LixiviadosHighlight() {
   return (
     <section id="lixiviados" className="bg-muted py-14">
-      <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 rounded-lg border border-primary/25 bg-card p-8 sm:flex-row sm:items-center">
-        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-lime text-lime-foreground">
-          <Trash2 className="h-8 w-8" strokeWidth={1.5} />
-        </span>
-        <div>
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary-mid">Somos expertos en</p>
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 lg:grid-cols-2 lg:px-8">
+        <div className="rounded-lg border border-primary/25 bg-card p-8">
+          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-lime text-lime-foreground">
+            <Trash2 className="h-8 w-8" strokeWidth={1.5} />
+          </span>
+          <p className="mt-5 text-sm font-bold uppercase tracking-[0.14em] text-primary-mid">Somos expertos en</p>
           <h2 className="mt-1 text-2xl font-bold text-navy">Tratamiento de lixiviados</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Soluciones para el tratamiento de lixiviados en rellenos sanitarios y estaciones de transferencia, con
             esquemas físico-químicos y biológicos diseñados para cargas altamente contaminantes.
           </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <img
+            src={lixiviados1Img.url}
+            alt="Muestras de lixiviado en proceso de tratamiento"
+            loading="lazy"
+            className="h-64 w-full rounded-lg object-cover sm:h-72"
+          />
+          <img
+            src={lixiviados2Img.url}
+            alt="Ensayo de jarra para tratamiento de lixiviados"
+            loading="lazy"
+            className="h-64 w-full rounded-lg object-cover sm:h-72"
+          />
         </div>
       </div>
     </section>
@@ -305,8 +362,8 @@ export function AboutSection() {
         </div>
 
         <img
-          src={sobreImg.url}
-          alt="Sistemas de bombeo y descarga de agua tratada"
+          src={equipoImg.url}
+          alt="Equipo SAU Ingeniería"
           loading="lazy"
           width={360}
           height={290}
