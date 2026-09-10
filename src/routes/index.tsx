@@ -71,6 +71,7 @@ function Index() {
       <HeroSection />
       <ValueProp />
       <ServicesGrid />
+      <SeguimientoSection />
       <LixiviadosHighlight />
       <AboutSection />
       <MissionVision />
