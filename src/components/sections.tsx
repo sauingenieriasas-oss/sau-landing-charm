@@ -223,17 +223,32 @@ export function ServicesGrid() {
 export function LixiviadosHighlight() {
   return (
     <section id="lixiviados" className="bg-muted py-14">
-      <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 rounded-lg border border-primary/25 bg-card p-8 sm:flex-row sm:items-center">
-        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-lime text-lime-foreground">
-          <Trash2 className="h-8 w-8" strokeWidth={1.5} />
-        </span>
-        <div>
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary-mid">Somos expertos en</p>
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 lg:grid-cols-2 lg:px-8">
+        <div className="rounded-lg border border-primary/25 bg-card p-8">
+          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-lime text-lime-foreground">
+            <Trash2 className="h-8 w-8" strokeWidth={1.5} />
+          </span>
+          <p className="mt-5 text-sm font-bold uppercase tracking-[0.14em] text-primary-mid">Somos expertos en</p>
           <h2 className="mt-1 text-2xl font-bold text-navy">Tratamiento de lixiviados</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Soluciones para el tratamiento de lixiviados en rellenos sanitarios y estaciones de transferencia, con
             esquemas físico-químicos y biológicos diseñados para cargas altamente contaminantes.
           </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <img
+            src={lixiviados1Img.url}
+            alt="Muestras de lixiviado en proceso de tratamiento"
+            loading="lazy"
+            className="h-64 w-full rounded-lg object-cover sm:h-72"
+          />
+          <img
+            src={lixiviados2Img.url}
+            alt="Ensayo de jarra para tratamiento de lixiviados"
+            loading="lazy"
+            className="h-64 w-full rounded-lg object-cover sm:h-72"
+          />
         </div>
       </div>
     </section>
