@@ -309,8 +309,8 @@ export function AboutSection() {
         </div>
 
         <img
-          src={sobreImg.url}
-          alt="Sistemas de bombeo y descarga de agua tratada"
+          src={equipoImg.url}
+          alt="Equipo SAU Ingeniería"
           loading="lazy"
           width={360}
           height={290}
