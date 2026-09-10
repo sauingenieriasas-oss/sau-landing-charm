@@ -220,6 +220,44 @@ export function ServicesGrid() {
   );
 }
 
+export function SeguimientoSection() {
+  return (
+    <section id="seguimiento" className="bg-background py-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2 lg:px-8">
+        <img
+          src={seguimientoImg.url}
+          alt="Monitoreo en tiempo real de plantas de tratamiento de agua"
+          loading="lazy"
+          className="h-72 w-full rounded-lg object-cover lg:h-96"
+        />
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">Seguimiento a nuestras aplicaciones</p>
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl">
+            Control y acompañamiento de cada aplicación
+          </h2>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            Acompañamos cada implementación con monitoreo de variables, análisis de resultados y ajustes técnicos que
+            garantizan el desempeño esperado. Nuestro seguimiento permite tomar decisiones a tiempo, mantener la
+            estabilidad del proceso y asegurar el cumplimiento ambiental.
+          </p>
+          <ul className="mt-6 space-y-3">
+            {[
+              "Monitoreo de variables críticas en tiempo real",
+              "Análisis de tendencias y reportes de desempeño",
+              "Ajustes de dosificación y operación según resultados",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-sm font-medium text-navy">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function LixiviadosHighlight() {
   return (
     <section id="lixiviados" className="bg-muted py-14">
