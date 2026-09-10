@@ -10,6 +10,7 @@ import {
   MissionVision,
   ProductsSection,
   SectorsSection,
+  SeguimientoSection,
   ServicesGrid,
   ValueProp,
 } from "@/components/sections";
