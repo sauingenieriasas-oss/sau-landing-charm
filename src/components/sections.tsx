@@ -28,6 +28,10 @@ import {
 } from "lucide-react";
 
 import bannerImg from "@/assets/banner-inicio-sau.png.asset.json";
+import equipoImg from "@/assets/equipo-sau.jpg.asset.json";
+import lixiviados1Img from "@/assets/lixiviados-1.png.asset.json";
+import lixiviados2Img from "@/assets/lixiviados-2.png.asset.json";
+import seguimientoImg from "@/assets/seguimiento-aplicaciones.png.asset.json";
 import sobreImg from "@/assets/sobre-planta-sau.jpg.asset.json";
 import {
   COMMITMENTS,
