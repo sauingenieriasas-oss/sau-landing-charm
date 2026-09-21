@@ -367,7 +367,7 @@ export function AboutSection() {
           loading="lazy"
           width={360}
           height={290}
-          className="h-full max-h-[340px] w-full rounded-lg object-cover"
+          className="h-auto w-full self-center rounded-lg object-contain"
         />
 
         <div className="space-y-5 rounded-lg bg-muted p-6">
