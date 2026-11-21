@@ -16,6 +16,18 @@ import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { WhatsappFab } from "../components/WhatsappFab";
 
+const googleFontsCss =
+  "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap";
+
+// Install before HeadContent so even a cached font stylesheet's load is caught.
+const activateGoogleFonts = `document.addEventListener('load', function activateFonts(event) {
+  var link = event.target;
+  if (link instanceof HTMLLinkElement && link.href === ${JSON.stringify(googleFontsCss)}) {
+    link.media = 'all';
+    document.removeEventListener('load', activateFonts, true);
+  }
+}, true);`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -93,15 +105,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "preload", as: "style", href: appCss },
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap",
+        href: googleFontsCss,
+        media: "print",
       },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", type: "image/png", href: "/favicon.png", sizes: "64x64" },
@@ -118,7 +132,11 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script dangerouslySetInnerHTML={{ __html: activateGoogleFonts }} />
         <HeadContent />
+        <noscript>
+          <link rel="stylesheet" href={googleFontsCss} />
+        </noscript>
       </head>
       <body>
         {children}

@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep shared stylesheet hints and font loading in the root head; load Google Fonts with print media, a pre-head load listener, and a noscript stylesheet fallback so fonts do not block first paint.
