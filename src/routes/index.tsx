@@ -34,9 +34,9 @@ export const Route = createFileRoute("/")({
           "Optimizamos lo que ya tienes y multiplicamos sus resultados: agua potable, aguas residuales, lixiviados, MBBR e insumos químicos.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://sauingenieria.co/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://sauingenieria.co/" }],
     scripts: [
       {
         type: "application/ld+json",

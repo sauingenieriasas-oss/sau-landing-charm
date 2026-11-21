@@ -20,9 +20,9 @@ export const Route = createFileRoute("/contacto")({
         content: "Solicita asesoría técnica para tu planta o proceso industrial en Colombia.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/contacto" },
+      { property: "og:url", content: "https://sauingenieria.co/contacto" },
     ],
-    links: [{ rel: "canonical", href: "/contacto" }],
+    links: [{ rel: "canonical", href: "https://sauingenieria.co/contacto" }],
   }),
   component: ContactoPage,
 });

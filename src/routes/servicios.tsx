@@ -20,9 +20,9 @@ export const Route = createFileRoute("/servicios")({
           "Soluciones técnicas y químicas para tratamiento de agua, procesos industriales y cumplimiento normativo.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/servicios" },
+      { property: "og:url", content: "https://sauingenieria.co/servicios" },
     ],
-    links: [{ rel: "canonical", href: "/servicios" }],
+    links: [{ rel: "canonical", href: "https://sauingenieria.co/servicios" }],
   }),
   component: ServiciosPage,
 });
