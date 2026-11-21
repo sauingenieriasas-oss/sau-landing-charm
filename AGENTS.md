@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Keep shared stylesheet hints and font loading in the root head; load Google Fonts with print media, a pre-head load listener, and a noscript stylesheet fallback so fonts do not block first paint.
+- Define social image metadata only on leaf routes using absolute public-domain URLs to CDN-hosted 1200×630 renditions of existing page imagery; preserve the visible originals.

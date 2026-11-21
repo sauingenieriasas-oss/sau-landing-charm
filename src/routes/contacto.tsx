@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+import socialImage from "@/assets/sau-contacto-social.jpg.asset.json";
 
 import { ContactForm } from "@/components/ContactForm";
 import { WhatsappGlyph } from "@/components/SiteHeader";
@@ -21,6 +22,15 @@ export const Route = createFileRoute("/contacto")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://sauingenieria.co/contacto" },
+      { name: "geo.region", content: "CO-ATL" },
+      { name: "geo.placename", content: "Barranquilla" },
+      { property: "og:image", content: `https://sauingenieria.co${socialImage.url}` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Logo oficial de SAU Ingeniería" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `https://sauingenieria.co${socialImage.url}` },
+      { name: "twitter:image:alt", content: "Logo oficial de SAU Ingeniería" },
     ],
     links: [{ rel: "canonical", href: "https://sauingenieria.co/contacto" }],
   }),

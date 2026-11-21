@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import socialImage from "@/assets/sau-inicio-social.jpg.asset.json";
 
 import {
   AboutSection,
@@ -35,6 +36,15 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://sauingenieria.co/" },
+      { name: "geo.region", content: "CO-ATL" },
+      { name: "geo.placename", content: "Barranquilla" },
+      { property: "og:image", content: `https://sauingenieria.co${socialImage.url}` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "SAU Ingeniería — tratamiento de agua" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `https://sauingenieria.co${socialImage.url}` },
+      { name: "twitter:image:alt", content: "SAU Ingeniería — tratamiento de agua" },
     ],
     links: [{ rel: "canonical", href: "https://sauingenieria.co/" }],
     scripts: [
