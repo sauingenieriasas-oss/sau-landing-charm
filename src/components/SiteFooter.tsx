@@ -4,6 +4,19 @@ import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { LogoInverted } from "./Logo";
 import { COMPANY, CONTACT, SERVICES } from "@/lib/site";
 
+const CONNECTORS = new Set(["y", "e", "o", "u", "de", "del", "la", "el", "los", "las", "en", "con", "a", "por", "para", "que"]);
+
+function properCase(text: string) {
+  return text
+    .split(" ")
+    .map((word, i) => {
+      const lowered = word.toLowerCase();
+      if (i > 0 && CONNECTORS.has(lowered)) return lowered;
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
 export function SiteFooter() {
   return (
     <footer className="bg-navy text-navy-foreground">
@@ -22,7 +35,7 @@ export function SiteFooter() {
             {SERVICES.slice(0, 5).map((s) => (
               <li key={s.id}>
                 <Link to="/servicios" hash={s.id} className="hover:text-primary">
-                  {s.title}
+                  {properCase(s.title)}
                 </Link>
               </li>
             ))}
@@ -44,7 +57,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link to="/" hash="mision" className="hover:text-primary">
-                Misión y visión
+                Misión y Visión
               </Link>
             </li>
             <li>
