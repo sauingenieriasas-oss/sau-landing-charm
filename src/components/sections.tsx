@@ -122,19 +122,19 @@ export function HeroSection() {
           {
             Icon: Users,
             color: "bg-primary",
-            title: "Soluciones integrales",
+            title: "Soluciones Integrales",
             text: "Enfocadas en eficiencia y sostenibilidad",
           },
           {
             Icon: FlaskConical,
             color: "bg-navy",
-            title: "Experiencia técnica",
+            title: "Experiencia Técnica",
             text: "Ingeniería química y ambiental aplicada",
           },
           {
             Icon: ShieldCheck,
             color: "bg-primary-mid",
-            title: "Compromiso y confianza",
+            title: "Compromiso y Confianza",
             text: "Acompañamiento cercano y resultados medibles",
           },
         ].map(({ Icon, color, title, text }) => (
